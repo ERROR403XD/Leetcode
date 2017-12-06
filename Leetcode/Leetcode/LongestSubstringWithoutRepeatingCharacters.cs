@@ -11,42 +11,38 @@ namespace Leetcode
         public int LengthOfLongestSubstring(string s)
         {
             if (s.Length <= 1) return s.Length;
-            int endFlag = s.Length - 1;
-            int areaMax = 0;
-            int endMaxStart = 0;
-            for(int flag = 1;flag<=endFlag;flag++)
+            int length;
+            for(length= s.Length; length>=2;length--)
             {
-                int tempStart = FindNewEndMaxStart(s, flag);
-                if (flag - tempStart >= areaMax)
+                for(int flag = 0;flag<=s.Length - length;flag++)
                 {
-                    areaMax = flag - tempStart + 1;
-                    endMaxStart = tempStart;
-                }      
-            }
-            return areaMax;  
-        }
-        public int FindNewEndMaxStart(string s,int flag)
-        {
-            if (flag == 0) return 0;
-            for(int i = flag-1;i>=0;i--)
-            {
-                if(JudgeExist(s,s[i],i+1,flag)!=-1)
-                {
-                    return i + 1;
-                }  
-            }
-            return 0;
-        }
-        public int JudgeExist(string s,char target,int start,int end)
-        {
-            for(int i = start;i <= end;i++)
-            {
-                if(s[i] == target)
-                {
-                    return i;
+                    if (JudgeRepeat(s, flag, flag + length - 1))
+                    {
+                        return length;
+                    }
                 }
             }
-            return -1;
+            return 1;
+        }
+        public bool JudgeRepeat(string s,int start,int end)
+        {
+            int[] chars = new int[256];
+            for(int i = 0;i<chars.Length;i++)
+            {
+                chars[i] = 0;
+            }
+            for(int i = start;i<=end;i++)
+            {
+                if (chars[(int)(s[i])] == 1)
+                {
+                    return false;
+                }
+                else     
+                {             
+                    chars[(int)(s[i])] += 1;
+                }   
+            }      
+            return true;  
         }
         static void Main(string[] args)
         {
