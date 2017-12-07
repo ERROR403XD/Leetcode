@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Entry.cs" />
     <Compile Include="LongestSubstringWithoutRepeatingCharacters.cs" />
+    <Compile Include="MedianofTwoSortedArrays.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
