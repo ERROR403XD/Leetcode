@@ -41,15 +41,6 @@ namespace Leetcode
                 }
             }
             return dp.Max();
-        }
-
-        static void Main(string[] args)
-        {
-            LongestSubstringWithoutRepeatingCharacters test = new LongestSubstringWithoutRepeatingCharacters();
-            string testString = "abba";
-            Console.WriteLine(test.LengthOfLongestSubstring(testString).ToString());
-
-            Console.ReadKey();
-        }
+        }    
     }
 }
