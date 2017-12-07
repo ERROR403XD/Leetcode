@@ -11,43 +11,42 @@ namespace Leetcode
         public int LengthOfLongestSubstring(string s)
         {
             if (s.Length <= 1) return s.Length;
-            int length;
-            for(length= s.Length; length>=2;length--)
+            int[] dp = new int[s.Length];
+            Dictionary<char, int> dic = new Dictionary<char, int>();
+            int currentStart = 0;
+            dp[0] = 1;
+            dic.Add(s[0], 0);
+            for(int flag = 1;flag<s.Length;flag++)
             {
-                for(int flag = 0;flag<=s.Length - length;flag++)
+                if(!dic.ContainsKey(s[flag]))
                 {
-                    if (JudgeRepeat(s, flag, flag + length - 1))
+                    dp[flag] = dp[flag - 1] + 1;
+                    dic.Add(s[flag], flag);
+                }
+                else
+                {
+                    if(dic[s[flag]]<currentStart)
                     {
-                        return length;
+                        dp[flag] = dp[flag - 1] + 1;
+                        dic.Remove(s[flag]);
+                        dic.Add(s[flag], flag);
                     }
+                    else
+                    {
+                        currentStart = dic[s[flag]] + 1;
+                        dp[flag] = flag - dic[s[flag]];
+                        dic.Remove(s[flag]);
+                        dic.Add(s[flag], flag);
+                    }  
                 }
             }
-            return 1;
+            return dp.Max();
         }
-        public bool JudgeRepeat(string s,int start,int end)
-        {
-            int[] chars = new int[256];
-            for(int i = 0;i<chars.Length;i++)
-            {
-                chars[i] = 0;
-            }
-            for(int i = start;i<=end;i++)
-            {
-                if (chars[(int)(s[i])] == 1)
-                {
-                    return false;
-                }
-                else     
-                {             
-                    chars[(int)(s[i])] += 1;
-                }   
-            }      
-            return true;  
-        }
+
         static void Main(string[] args)
         {
             LongestSubstringWithoutRepeatingCharacters test = new LongestSubstringWithoutRepeatingCharacters();
-            string testString = "asdcghtrgfasmmhjfdf";
+            string testString = "abba";
             Console.WriteLine(test.LengthOfLongestSubstring(testString).ToString());
 
             Console.ReadKey();
