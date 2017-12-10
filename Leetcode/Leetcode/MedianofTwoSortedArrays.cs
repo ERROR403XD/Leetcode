@@ -9,6 +9,127 @@ namespace Leetcode
     class MedianofTwoSortedArrays
     {
 
+        public double FindMedianSortedArrays(int[] nums1, int[] nums2,bool aaaaaa)
+        {
+            int m = nums1.Length;
+            int n = nums2.Length;
+
+            int[] arrayM = (m > n) ? nums1 : nums2;
+            int[] arrayN = (m > n) ? nums2 : nums1;
+
+            m = arrayM.Length;
+            n = arrayN.Length;
+
+            bool isOdd = ((m + n) % 2 == 1) ? true : false;
+
+            if(n==0)
+            {
+                return ((isOdd) ? (double)arrayM[m / 2] : ((double)arrayM[m / 2] + (double)arrayM[m / 2 - 1]) / 2);
+            }
+
+            if(isOdd)
+            {
+                if(arrayM.Last()>=arrayN.Last())
+                {
+                    m--;
+                }
+                else
+                {
+                    n--;
+                }
+            }
+
+            if(n==0)
+            {
+                return (double)arrayM[m / 2]; 
+            }
+
+            int target = FindEqual(arrayN, arrayM, 0, n - 1, n, m);
+            if(isOdd)
+            {
+                return (double)GetNext(arrayN, arrayM, target - 1, (m + n) / 2 - target - 1);
+            }
+            else
+            {
+                return ((double)GetNext(arrayN, arrayM, target - 1, (m + n) / 2 - target - 1)+(double)(GetPrevious(arrayN, arrayM, target, (m + n) / 2 - target)))/ 2;
+
+            }   
+        }
+
+        public int FindEqual(int[] mainArray,int[] subArray,int mainStart,int mainEnd,int mainLength,int subLength)
+        {
+            int mainCurrent = (mainStart + mainEnd+1) / 2;
+            int subCurrent = (mainLength + subLength)/2 - mainCurrent;
+            if(mainEnd < 0)
+            {
+                return 0;
+            }
+            if(mainStart>mainEnd)
+            {
+                return mainEnd+1;    
+            }
+
+            if(mainCurrent == 0)
+            {
+                if(mainArray[mainCurrent]>=subArray[subCurrent-1])
+                {
+                    return mainCurrent;
+                }
+                else
+                {
+                    return FindEqual(mainArray, subArray, 1, mainEnd, mainLength, subLength);
+                }
+
+            }
+
+
+            if(subCurrent == 0)
+            {
+
+            }
+
+
+            if (mainArray[mainCurrent]>=subArray[subCurrent-1] && subArray[subCurrent]>=mainArray[mainCurrent-1])
+            {
+                return mainCurrent;
+            }
+            else if(subArray[subCurrent]<mainArray[mainCurrent-1])
+            {
+
+                return FindEqual(mainArray, subArray, mainStart, mainCurrent-1, mainLength, subLength);
+            }
+            else
+            {
+
+                return FindEqual(mainArray, subArray, mainCurrent+1, mainEnd, mainLength, subLength);
+            }   
+        }
+
+        public int GetNext(int[] mainArray, int[] subArray, int mainIndex, int subIndex)
+        {
+            if (mainIndex >= mainArray.Length - 1)
+            {
+                return subArray[subIndex + 1];
+            }
+            if (subIndex >= subArray.Length - 1)
+            {
+                return mainArray[mainIndex + 1];
+            }
+            return Math.Min(mainArray[mainIndex + 1], subArray[subIndex + 1]);
+        }
+        public int GetPrevious(int[] mainArray, int[] subArray, int mainIndex, int subIndex)
+        {
+            if (mainIndex <= 0)
+            {
+                return subArray[subIndex - 1];
+            }
+            if (subIndex <= 0)
+            {
+                return mainArray[mainIndex - 1];
+            }
+            return Math.Max(mainArray[mainIndex - 1], subArray[subIndex - 1]);
+        }
+
         public double FindMedianSortedArrays(int[] nums1, int[] nums2)
         {
             double target = 0;
@@ -35,43 +156,6 @@ namespace Leetcode
                     n--;
                 }
             }
-            /*
-            if (arrayM[0] >= arrayN.Last())
-            {
-                if(isOdd)
-                {
-                    return (double)arrayM[(m + 2) / 2 - n];
-                }
-                else
-                {
-                    if(arrayM.Length == arrayN.Length)
-                    {
-                        return ((double)arrayN.Last() + (double)arrayM[0]) / 2;
-                    }
-                    else
-                    {
-                        return ((double)arrayM[(arrayM.Length+arrayN.Length)/2-1-arrayN.Length] + (double)arrayM[(arrayM.Length + arrayN.Length) / 2 - arrayN.Length]) / 2;
-                    }
-                }
-            }
-            if (arrayN[0] >= arrayM.Last())
-            {
-                if (isOdd)
-                {
-                    return (double)arrayN[(n + 2) / 2 - m];
-                }
-                else
-                {
-                    if (arrayN.Length == arrayM.Length)
-                    {
-                        return ((double)arrayM.Last() + (double)arrayN[0]) / 2;
-                    }
-                    else
-                    {
-                        return ((double)arrayN[(arrayN.Length + arrayM.Length) / 2 - 1 - arrayM.Length] + (double)arrayM[(arrayM.Length + arrayN.Length) / 2 - arrayM.Length]) / 2;
-                    }
-                }
-            }   */
             if (n == 0)
             {
                 int midM = arrayM[m / 2];
@@ -95,70 +179,7 @@ namespace Leetcode
 
             int tleft = mleft + nleft;
             int tright = mright + nright;
-            int temp = 0;
-            /*
-            while (true)
-            {      
-                if (tleft == tright)
-                {
-                    if (isOdd)
-                    {
-                        target = (double)arrayM[mcurrent];
-                    }
-                    else
-                    {
-                        if(mcurrent == m-1)
-                        {
-                            target = ((double)arrayM[mcurrent] + (double)arrayN[ncurrent + 1]) / 2;
-                            break;
-                        }
-                        target = ((double)arrayM[mcurrent] + (double)((arrayM[mcurrent + 1]< arrayN[ncurrent + 1]) ?arrayM[mcurrent+1] :arrayN[ncurrent+1] )) / 2;
-                    }
-                    break;
-                }
-                temp = (tright - tleft) / 2;
-                ncurrent = (temp > 0) ? ncurrent + temp : ncurrent + temp + 1;
-                nleft = ncurrent;
-                nright = n - nleft - 1;
-
-                mleft = FindKth(arrayM, arrayN[ncurrent], 0, m - 1);
-                mright = m - mleft;
-                mcurrent = mleft - 1;
-
-                tleft = mleft + nleft;
-                tright = mright + nright;
-
-                if (tleft == tright)
-                {
-                    if (isOdd)
-                    {
-                        target = (double)arrayN[ncurrent];
-                    }
-                    else
-                    {
-                        if (ncurrent == n - 1)
-                        {
-                            target = ((double)arrayN[ncurrent] + (double)arrayM[mcurrent + 1]) / 2;
-                            break;
-                        }
-                        target = ((double)arrayN[ncurrent] + (double)((arrayN[ncurrent + 1] < arrayM[mcurrent + 1]) ? arrayN[ncurrent + 1] : arrayM[mcurrent + 1])) / 2;
-                    }
-                    break;    
-                }
-                temp = (tright - tleft) / 2;
-                mcurrent = (temp > 0) ? mcurrent + temp : mcurrent + temp + 1;
-                mleft = mcurrent;
-                mright = m - mleft - 1;
-
-                nleft = FindKth(arrayN, arrayM[mcurrent], 0, n - 1);
-                nright = n - nleft;
-                ncurrent = nleft - 1;
-                tleft = mleft + nleft;
-                tright = mright + nright;
-            }
-            */
-
-            
+            int temp = 0;        
             while (true)
             {
                 temp = (tright - tleft) / 2;
@@ -271,17 +292,6 @@ namespace Leetcode
                 return FindKth(source, target, start, start + length / 2 - 1);
             }
         }
-        public int GetNext(int[] mainArray,int[] subArray,int mainIndex,int subIndex)
-        {
-            if(mainIndex == mainArray.Length-1)
-            {
-                return subArray[subIndex + 1];
-            }
-            if (subIndex == subArray.Length-1)
-            {
-                return mainArray[mainIndex + 1];
-            }
-            return (mainArray[mainIndex + 1] < subArray[subIndex + 1]) ? mainArray[mainIndex + 1] : subArray[subIndex + 1];
-        }
+
     }
 }

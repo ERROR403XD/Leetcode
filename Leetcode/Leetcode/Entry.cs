@@ -13,8 +13,8 @@ namespace Leetcode
             MedianofTwoSortedArrays test = new MedianofTwoSortedArrays();
             string testString = "abba";
             int[] testArray = new int[5] { 2, 6, 7, 12, 35 };
-            int[] testArrayM = new int[] {1,2};
-            int[] testArrayN = new int[] {3,4};
+            int[] testArrayM = new int[] {3};
+            int[] testArrayN = new int[] {1,2};
             double pi = 3.1415926;
 
             double length = 2.7 * 16;
@@ -24,7 +24,8 @@ namespace Leetcode
             //Console.WriteLine(5550000000 * ((2 * pi * pi * 0.1 * 0.01 * 0.01) - (2 * pi * pi * 0.1 * 0.007 * 0.007)));
             //Console.WriteLine(3110000000 * (pi*0.076*0.076-pi*0.074*0.074)*0.15);
             //Console.WriteLine(test.FindKth(testArray,1).ToString());          
-            Console.WriteLine(test.FindMedianSortedArrays(testArrayM,testArrayN).ToString());
+            //Console.WriteLine(test.FindEqual(testArrayM,testArrayN,0,testArrayM.Length-1,testArrayM.Length,testArrayN.Length).ToString());
+            Console.WriteLine(test.FindMedianSortedArrays(testArrayM, testArrayN, true));
             Console.ReadKey();
         }
     }
