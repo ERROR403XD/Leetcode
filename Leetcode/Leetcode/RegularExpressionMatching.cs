@@ -11,31 +11,68 @@ namespace Leetcode
         public bool IsMatch(string s, string p)
         {
             if (s == null || s.Length == 0) return false;
+            if (p == null || p.Length == 0) return false;
 
             int sourceFlag = 0;
             int targetFlag = 0;
             char targetChar;
 
-            while(true)
+            while (true)
             {
+                
+
                 targetChar = p[targetFlag];
-                if(targetChar == '*')
+                if (targetChar == '*')
                 {
                     targetChar = p[targetFlag - 1];
                 }
 
-                if(!IsMatch(s[sourceFlag],targetChar)&&p[targetFlag]!='*')
+                bool tempResult = IsMatch(s[sourceFlag], targetChar);
+
+                if (tempResult)
                 {
-                    return false;
+                    if (targetChar == '*')
+                    {
+                        sourceFlag++;   
+                        if(sourceFlag == s.Length)
+                        {
+                            return true;
+                        }  
+                    }
+                    else
+                    {
+                        sourceFlag++;
+                        targetFlag++;   
+                    }  
+                     
+                    if(sourceFlag == s.Length && targetFlag == p.Length)
+                    {
+                        return true;
+                    }     
+                    if(sourceFlag == s.Length || targetFlag == p.Length)
+                    {
+                        return false;
+                    }
                 }
-                if(p[targetFlag] != '*')
+                else
                 {
-                    targetFlag++;
-                    continue;
+                    if (targetChar == '*')
+                    {                  
+                        targetFlag++;
+                        if(targetFlag == p.Length)
+                        {
+                            return false;
+                        }
+                        continue;
+                    }
+                    else
+                    {
+                        return false;
+                    }  
                 }
-                if(p[targetFlag] == '*')
                   
             }
+
             return true;
 
         }

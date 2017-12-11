@@ -11,8 +11,8 @@ namespace Leetcode
         static void Main(string[] args)
         {
             RegularExpressionMatching test = new RegularExpressionMatching();
-            string testString = "absd";
-            string testString2 = ".*";
+            string testString = "abb";
+            string testString2 = ".b";
             int[] testArray = new int[5] { 2, 6, 7, 12, 35 };
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};
