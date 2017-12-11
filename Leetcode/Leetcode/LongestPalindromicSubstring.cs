@@ -10,7 +10,7 @@ namespace Leetcode
     {
         public string LongestPalindrome(string s)
         {
-
+            return null;    
         }
     }
 }
