@@ -13,68 +13,74 @@ namespace Leetcode
             if (s == null || s.Length == 0) return false;
             if (p == null || p.Length == 0) return false;
 
-            int sourceFlag = 0;
-            int targetFlag = 0;
+            return IsMatch(s, p, 0, 0);
+
+        }
+
+        public bool IsMatch(string s, string p, int sStart, int pStart)
+        {
+            if(sStart == s.Length&&pStart==p.Length)
+            {
+                return true;
+            }
+            else if(sStart==s.Length||pStart==p.Length)
+            {
+                return false;
+            }
+
+            int sourceFlag = sStart;
+            int targetFlag = pStart;
             char targetChar;
 
-            while (true)
+
+            targetChar = p[targetFlag];
+            if(targetChar == '*')
             {
-                
+                targetChar = p[targetFlag - 1];
+            }
+            if (targetFlag < p.Length - 1 && p[targetFlag + 1] == '*')
+            {
+                targetFlag++;
+            }
 
-                targetChar = p[targetFlag];
-                if (targetChar == '*')
+            if (targetChar == '.' && p[targetFlag] == '*' && targetFlag == p.Length - 1)
+            {
+                return true;
+            }
+
+            if (p[targetFlag] != '*')
+            {
+                if(!IsMatch(s[sourceFlag],targetChar))
                 {
-                    targetChar = p[targetFlag - 1];
-                }
-
-                bool tempResult = IsMatch(s[sourceFlag], targetChar);
-
-                if (tempResult)
-                {
-                    if (targetChar == '*')
-                    {
-                        sourceFlag++;   
-                        if(sourceFlag == s.Length)
-                        {
-                            return true;
-                        }  
-                    }
-                    else
-                    {
-                        sourceFlag++;
-                        targetFlag++;   
-                    }  
-                     
-                    if(sourceFlag == s.Length && targetFlag == p.Length)
-                    {
-                        return true;
-                    }     
-                    if(sourceFlag == s.Length || targetFlag == p.Length)
-                    {
-                        return false;
-                    }
+                    return false;
                 }
                 else
                 {
-                    if (targetChar == '*')
-                    {                  
-                        targetFlag++;
-                        if(targetFlag == p.Length)
+                    return IsMatch(s, p, sourceFlag + 1, targetFlag + 1);
+                }
+            }
+            else
+            {
+                if(IsMatch(s,p,sourceFlag,targetFlag+1))
+                {
+                    return true;
+                }
+                else
+                {
+                    if(IsMatch(s[sourceFlag],targetChar))
+                    {
+                        if (sourceFlag == s.Length-1&&targetFlag==p.Length-1)
                         {
-                            return false;
+                            return true;
                         }
-                        continue;
+                        return IsMatch(s, p, sourceFlag + 1, targetFlag);
                     }
                     else
                     {
-                        return false;
-                    }  
+                        return IsMatch(s, p, sourceFlag + 1, targetFlag + 1);
+                    }
                 }
-                  
             }
-
-            return true;
-
         }
 
         public bool IsMatch(char s,char t)
