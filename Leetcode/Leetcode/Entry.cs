@@ -11,23 +11,17 @@ namespace Leetcode
         static void Main(string[] args)
         {
             RegularExpressionMatching test = new RegularExpressionMatching();
-            string testString = "aa";
-            string testString2 = "a*";
-            int[] testArray = new int[5] { 2, 6, 7, 12, 35 };
+            ContainerWithMostWater test2 = new ContainerWithMostWater();
+            string testString = "abac";
+            string testString2 = "aa*b";
+            int[] testArray = new int[] {1,1};
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};
 
             int testInt = -2147447412;
-            double pi = 3.1415926;
-
-            double rate = 1.7 * Pow(10, -8);
-            double area = 2 * Pow(10, -6);
-
-            Console.WriteLine(3.5 * 3.5 * pi);
-            Console.WriteLine(71*1.001/70.999);
-            Console.WriteLine(10*rate/area);
 
             Console.WriteLine(test.IsMatch(testString,testString2));
+            Console.WriteLine(test2.MaxArea(testArray).ToString());
 
             Console.ReadKey();
         }
