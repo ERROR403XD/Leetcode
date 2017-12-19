@@ -12,6 +12,7 @@ namespace Leetcode
         {
             RegularExpressionMatching test = new RegularExpressionMatching();
             ContainerWithMostWater test2 = new ContainerWithMostWater();
+            RomeNumber test3 = new RomeNumber();
             string testString = "a";
             string testString2 = "ab*b";
             int[] testArray = new int[] {1,1};
@@ -19,7 +20,8 @@ namespace Leetcode
             int[] testArrayN = new int[] {1,2};
 
             int testInt = -2147447412;
-
+                                               
+            Console.WriteLine(test3.RomanToInt("MDCCC").ToString());
             Console.WriteLine(test.IsMatch(testString,testString2));
             Console.WriteLine(test2.MaxArea(testArray).ToString());
 
