@@ -53,6 +53,7 @@
     <Compile Include="ReverseInteger.cs" />
     <Compile Include="RomeNumber.cs" />
     <Compile Include="StringtoInteger.cs" />
+    <Compile Include="ThreeSum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

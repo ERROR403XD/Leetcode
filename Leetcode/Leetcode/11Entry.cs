@@ -10,20 +10,25 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            RegularExpressionMatching test = new RegularExpressionMatching();
-            ContainerWithMostWater test2 = new ContainerWithMostWater();
-            RomeNumber test3 = new RomeNumber();
+            ThreeSumClass test = new ThreeSumClass();
             string testString = "a";
             string testString2 = "ab*b";
-            int[] testArray = new int[] {1,1};
+            int[] testArray = new int[] {-1, 0, 1, 2, -1, -4};
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};
 
             int testInt = -2147447412;
-                                               
-            Console.WriteLine(test3.RomanToInt("MDCCC").ToString());
-            Console.WriteLine(test.IsMatch(testString,testString2));
-            Console.WriteLine(test2.MaxArea(testArray).ToString());
+
+            List<int> testList = new List<int>();
+            testList.Add(1);
+
+            if(testList is IList<int>)
+            {
+                Console.WriteLine("ojkok");
+                Console.WriteLine(testList);
+            }
+
+           Console.WriteLine(test.ThreeSum(testArray));
 
             Console.ReadKey();
         }
