@@ -12,8 +12,8 @@ namespace Leetcode
         {
             RegularExpressionMatching test = new RegularExpressionMatching();
             ContainerWithMostWater test2 = new ContainerWithMostWater();
-            string testString = "abac";
-            string testString2 = "aa*b";
+            string testString = "a";
+            string testString2 = "ab*b";
             int[] testArray = new int[] {1,1};
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};

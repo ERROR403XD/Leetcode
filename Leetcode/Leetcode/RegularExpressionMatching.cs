@@ -8,42 +8,52 @@ namespace Leetcode
 {
     class RegularExpressionMatching
     {
+        private struct pair
+        {
+            public int i;
+            public int j;
+        }
         public bool IsMatch(string s, string p)
         {
-            bool[,] m = new bool[s.Length + 1, p.Length + 1];
-
-            m[0, 0] = true;
-
-            // Initiliaze m[0][j] as below loop start from i = 1
-            for (int i = 0; i < p.Length; i++)
+            bool[,] m = new bool[s.Length+1, p.Length+1];
+            List<pair> pairs = new List<pair>();
+            return Dp(0, 0, s, p, m,pairs);               
+        }
+        private bool Dp(int i,int j,string s,string p,bool[,] m,List<pair> pairs)
+        {
+            bool ans;
+            pair newPair;
+            newPair.i = i;newPair.j = j;
+            if (!pairs.Contains(newPair))
             {
-                if (p[i] == '*' && m[0, i - 1])
+                if (j == p.Length)
                 {
-                    m[0, i + 1] = true;
+                    ans = i == s.Length;
                 }
-            }
-
-            for (int i = 1; i < s.Length + 1; i++)
-            {
-                for (int j = 1; j < p.Length + 1; j++)
+                else
                 {
-                    if (p[j - 1] == '.')
+                    bool firstMatch = i < s.Length && IsMatch(s[i], p[j]);
+                    if (j + 1 < p.Length && p[j + 1] == '*')
                     {
-                        m[i, j] = m[i - 1, j - 1];
-                    }
-
-                    else if (p[j - 1] == '*')
-                    {
-                        m[i, j] = m[i, j - 2] || ((s[i - 1] == p[j - 2] || p[j - 2] == '.') && m[i - 1, j]);
+                        ans = Dp(i, j + 2, s, p, m, pairs) || (firstMatch && Dp(i + 1, j, s, p, m, pairs));
                     }
                     else
                     {
-                        m[i, j] = (m[i - 1, j - 1] && s[i - 1] == p[j - 1]);
+                        ans = firstMatch && Dp(i + 1, j + 1, s, p, m, pairs);
                     }
                 }
+                m[i, j] = ans;
+                pairs.Add(newPair);
             }
-
-            return m[s.Length, p.Length];
+            return m[i,j];
+        }
+        public bool IsMatch(char s, char t)
+        {
+            if (s == '.' || t == '.' || s == t)
+            {
+                return true;
+            }
+            return false;
         }
 
         public bool IsMatch(string s, string p, int sStart, int pStart)
@@ -125,13 +135,6 @@ namespace Leetcode
             }
         }
 
-        public bool IsMatch(char s,char t)
-        {
-            if(s=='.'||t == '.'||s==t)
-            {
-                return true;
-            }
-            return false;  
-        }
+
     }
 }
