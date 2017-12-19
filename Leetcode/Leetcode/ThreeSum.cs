@@ -8,9 +8,9 @@ namespace Leetcode
 {
     class ThreeSumClass
     {
-        public List<List<int>> ThreeSum(int[] nums)
+        public IList<IList<int>> ThreeSum(int[] nums)
         {
-            List<List<int>> resList = new List<List<int>>();
+            List<IList<int>> resList = new List<IList<int>>();
 
             for(int i = 0; i < nums.Length-2; i++)
             {
@@ -27,13 +27,12 @@ namespace Leetcode
                             tempres.Add(nums[j]);
                             tempres.Add(nums[k]);
 
-                            resList.Add(tempres);
+                            resList.Add(tempres as IList<int>);
                         }
                     }
                 }
             }
-
-            return resList;
+            return resList as IList<IList<int>>;
         }                                                     
     }
 }
