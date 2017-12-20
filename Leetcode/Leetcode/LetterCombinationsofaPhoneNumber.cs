@@ -11,55 +11,82 @@ namespace Leetcode
         public IList<string> LetterCombinations(string digits)
         {
             List<string> res = new List<string>();
-            if (digits.Length < 1) return res;      
+            if (digits.Length < 1) return res;
+            res.Add("");
             Dictionary<char, string> digs = new Dictionary<char, string>()
             {
                 { '2',"abc"},{ '3',"def"},{ '4',"ghi"},{ '5',"jkl"},{ '6',"mno"},{ '7',"pqrs"},{ '8',"tuv"},{ '9',"wxyz"},{ '0'," "}
-            };
-
-            List<int> reference = new List<int>();
-            List<int> record = new List<int>();
+            };          
             for(int i = 0;i<digits.Length;i++)
             {
-                if(digs.ContainsKey(digits[i]))
+                if (!digs.ContainsKey(digits[i])) continue;
+                int rec = res.Count;   
+                for(int k = 0;k<rec;k++)
                 {
-                    reference.Add(digs[digits[i]].Length-1);
-                }
-                else
-                {
-                    reference.Add(-1);
-                }
-                record.Add(0);
-            }
-            
-            while(RefCompare(record,reference))
-            {
-                string temp = "";  
-
-                for(int i = 0;i<record.Count;i++)
-                {
-                    if(reference[i]!=-1)
+                    string s = res[0];
+                    res.RemoveAt(0);
+                    for(int j = 0;j<digs[digits[i]].Length;j++)
                     {
-                        temp += digs[digits[i]][record[i]].ToString();
+                        res.Add(s + digs[digits[i]][j].ToString());     
                     }
                 }
+            }
 
-                res.Add(temp);
-                
-                RefPlus(record, reference);
-            }
-            string temp2 = "";
-            for (int i = 0; i < record.Count; i++)
-            {
-                if (reference[i] != -1)
-                {
-                    temp2 += digs[digits[i]][record[i]].ToString();
-                }
-            }
-            res.Add(temp2);
-            return res as IList<string>;
+            return res;
         }
-        private bool RefCompare(List<int> record, List<int> reference)
+            /*
+            public IList<string> LetterCombinations(string digits)
+            {
+                List<string> res = new List<string>();
+                if (digits.Length < 1) return res;      
+                Dictionary<char, string> digs = new Dictionary<char, string>()
+                {
+                    { '2',"abc"},{ '3',"def"},{ '4',"ghi"},{ '5',"jkl"},{ '6',"mno"},{ '7',"pqrs"},{ '8',"tuv"},{ '9',"wxyz"},{ '0'," "}
+                };
+
+                List<int> reference = new List<int>();
+                List<int> record = new List<int>();
+                for(int i = 0;i<digits.Length;i++)
+                {
+                    if(digs.ContainsKey(digits[i]))
+                    {
+                        reference.Add(digs[digits[i]].Length-1);
+                    }
+                    else
+                    {
+                        reference.Add(-1);
+                    }
+                    record.Add(0);
+                }
+
+                while(RefCompare(record,reference))
+                {
+                    string temp = "";  
+
+                    for(int i = 0;i<record.Count;i++)
+                    {
+                        if(reference[i]!=-1)
+                        {
+                            temp += digs[digits[i]][record[i]].ToString();
+                        }
+                    }
+
+                    res.Add(temp);
+
+                    RefPlus(record, reference);
+                }
+                string temp2 = "";
+                for (int i = 0; i < record.Count; i++)
+                {
+                    if (reference[i] != -1)
+                    {
+                        temp2 += digs[digits[i]][record[i]].ToString();
+                    }
+                }
+                res.Add(temp2);
+                return res as IList<string>;
+            }   */
+            private bool RefCompare(List<int> record, List<int> reference)
         {
             for(int i = 0;i<record.Count;i++)
             {
