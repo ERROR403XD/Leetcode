@@ -13,14 +13,14 @@ namespace Leetcode
             ThreeSumClass test = new ThreeSumClass();
             string testString = "a";
             string testString2 = "ab*b";
-            int[] testArray = new int[] {0,0,0,0,0,0,0};
+            int[] testArray = new int[] {0,0,0,0,0,0,1};
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};
 
             int testInt = -2147447412;
 
 
-            Console.WriteLine(test.ThreeSum(testArray));
+            Console.WriteLine(test.ThreeSumClosest(testArray,1).ToString());
 
             Console.ReadKey();
         }

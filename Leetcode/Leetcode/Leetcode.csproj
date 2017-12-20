@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="ContainerWithMostWater.cs" />
     <Compile Include="11Entry.cs" />
+    <Compile Include="LetterCombinationsofaPhoneNumber.cs" />
     <Compile Include="LongestPalindromicSubstring.cs" />
     <Compile Include="LongestSubstringWithoutRepeatingCharacters.cs" />
     <Compile Include="MedianofTwoSortedArrays.cs" />

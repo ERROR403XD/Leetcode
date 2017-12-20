@@ -148,5 +148,56 @@ namespace Leetcode
             a = b;
             b = temp;
         }
+
+        public int ThreeSumClosest(int[] nums, int target)
+        {
+            int res = nums[0] + nums[1] + nums[2];
+
+            Sort(nums);
+
+            for(int i = 0;i<nums.Length-2;i++)
+            {    
+                if(i==0 || nums[i]!=nums[i-1])
+                {
+                    int left = i + 1;
+                    int right = nums.Length - 1;
+
+                    while(left<right)
+                    {
+                        int temp = nums[i] + nums[left] + nums[right];
+
+                        if(temp == target)
+                        {
+                            return target;
+                        }
+                        else
+                        {
+                            if(Math.Abs(target-temp)<Math.Abs(target-res))
+                            {
+                                res = temp;
+                            }
+                            if (temp < target)
+                            {
+                                while(left<right)
+                                {
+                                    left++;
+                                    if (nums[left] != nums[left - 1]) break; 
+                                }   
+                            }
+                            else
+                            {
+                                while (left < right)
+                                {
+                                    right--;
+                                    if (nums[right] != nums[right + 1]) break;
+                                }  
+                            }
+                        }  
+                    }
+                }     
+            }
+
+            return res;
+        }
     }
 }
