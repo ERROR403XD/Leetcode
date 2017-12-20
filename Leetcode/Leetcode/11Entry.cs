@@ -10,8 +10,9 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            ThreeSumClass test = new ThreeSumClass();
-            string testString = "a";
+            LetterCombinationsofaPhoneNumber test = new LetterCombinationsofaPhoneNumber();
+
+            string testString = "213";
             string testString2 = "ab*b";
             int[] testArray = new int[] {0,0,0,0,0,0,1};
             int[] testArrayM = new int[] {3};
@@ -20,7 +21,7 @@ namespace Leetcode
             int testInt = -2147447412;
 
 
-            Console.WriteLine(test.ThreeSumClosest(testArray,1).ToString());
+            Console.WriteLine(test.LetterCombinations(testString));
 
             Console.ReadKey();
         }
