@@ -22,8 +22,9 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            RemoveNthNodeFromEndofList test = new RemoveNthNodeFromEndofList();
-            Console.WriteLine(test.RemoveNthFromEnd(head,1));
+            SwapNodes test = new SwapNodes();
+            test.ReverseKGroup(head, 2);
+            //Console.WriteLine(test.RemoveNthFromEnd(head,1));
 
             Console.ReadKey();
         }
