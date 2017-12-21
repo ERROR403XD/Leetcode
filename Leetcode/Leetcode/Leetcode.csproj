@@ -42,19 +42,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContainerWithMostWater.cs" />
+    <Compile Include="01-20\ContainerWithMostWater.cs" />
     <Compile Include="11Entry.cs" />
-    <Compile Include="LetterCombinationsofaPhoneNumber.cs" />
-    <Compile Include="LongestPalindromicSubstring.cs" />
-    <Compile Include="LongestSubstringWithoutRepeatingCharacters.cs" />
-    <Compile Include="MedianofTwoSortedArrays.cs" />
-    <Compile Include="PalindromeNumber.cs" />
+    <Compile Include="01-20\FourSum.cs" />
+    <Compile Include="01-20\LetterCombinationsofaPhoneNumber.cs" />
+    <Compile Include="01-20\LongestPalindromicSubstring.cs" />
+    <Compile Include="01-20\LongestSubstringWithoutRepeatingCharacters.cs" />
+    <Compile Include="01-20\MedianofTwoSortedArrays.cs" />
+    <Compile Include="01-20\PalindromeNumber.cs" />
+    <Compile Include="MergeTwoSortedLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegularExpressionMatching.cs" />
-    <Compile Include="ReverseInteger.cs" />
-    <Compile Include="RomeNumber.cs" />
-    <Compile Include="StringtoInteger.cs" />
-    <Compile Include="ThreeSum.cs" />
+    <Compile Include="01-20\PublicSource.cs" />
+    <Compile Include="01-20\RegularExpressionMatching.cs" />
+    <Compile Include="01-20\RemoveNthNodeFromEndofList.cs" />
+    <Compile Include="01-20\ReverseInteger.cs" />
+    <Compile Include="01-20\RomeNumber.cs" />
+    <Compile Include="01-20\StringtoInteger.cs" />
+    <Compile Include="01-20\ThreeSum.cs" />
+    <Compile Include="01-20\ValidParentheses.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
