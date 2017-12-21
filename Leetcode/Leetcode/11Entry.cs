@@ -10,7 +10,7 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            ThreeSumClass test = new ThreeSumClass();
+
             string testString = "a";
             string testString2 = "ab*b";
             int[] testArray = new int[] {0,0,0,0,0,0,1};
@@ -18,9 +18,12 @@ namespace Leetcode
             int[] testArrayN = new int[] {1,2};
 
             int testInt = -2147447412;
+            ListNode head = new ListNode(1);
+            ListNode end = new ListNode(2);
+            head.next = end;
 
-
-            Console.WriteLine(test.ThreeSumClosest(testArray,1).ToString());
+            RemoveNthNodeFromEndofList test = new RemoveNthNodeFromEndofList();
+            Console.WriteLine(test.RemoveNthFromEnd(head,1));
 
             Console.ReadKey();
         }
