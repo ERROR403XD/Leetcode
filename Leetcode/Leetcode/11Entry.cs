@@ -13,7 +13,7 @@ namespace Leetcode
 
             string testString = "a";
             string testString2 = "ab*b";
-            int[] testArray = new int[] {0,0,0,0,0,0,1};
+            int[] testArray = new int[] {2};
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};
 
@@ -22,9 +22,11 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            SwapNodes test = new SwapNodes();
-            test.ReverseKGroup(head, 2);
+            RemoveElementClass test = new RemoveElementClass();
+
+            test.RemoveElement(testArray, 3);
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
+            Console.WriteLine(testString2.Substring(12));
 
             Console.ReadKey();
         }

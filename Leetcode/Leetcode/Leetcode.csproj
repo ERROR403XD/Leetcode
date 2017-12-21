@@ -51,6 +51,7 @@
     <Compile Include="01-20\MedianofTwoSortedArrays.cs" />
     <Compile Include="01-20\PalindromeNumber.cs" />
     <Compile Include="GenerateParentheses.cs" />
+    <Compile Include="ImplementStrStr.cs" />
     <Compile Include="MergeTwoSortedLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="01-20\PublicSource.cs" />
@@ -61,6 +62,8 @@
     <Compile Include="01-20\StringtoInteger.cs" />
     <Compile Include="01-20\ThreeSum.cs" />
     <Compile Include="01-20\ValidParentheses.cs" />
+    <Compile Include="RemoveDuplicatesfromSortedArray.cs" />
+    <Compile Include="RemoveElement.cs" />
     <Compile Include="SwapNodes.cs" />
   </ItemGroup>
   <ItemGroup>
