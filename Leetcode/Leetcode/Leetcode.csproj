@@ -61,6 +61,7 @@
     <Compile Include="01-20\StringtoInteger.cs" />
     <Compile Include="01-20\ThreeSum.cs" />
     <Compile Include="01-20\ValidParentheses.cs" />
+    <Compile Include="SwapNodesinPairs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
