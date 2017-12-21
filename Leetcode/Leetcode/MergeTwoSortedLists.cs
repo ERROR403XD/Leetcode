@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Leetcode
 {
-    class MergeTwoSortedLists
+    class MergeSortedLists
     {
         public ListNode MergeTwoLists(ListNode l1, ListNode l2)
         {
@@ -45,6 +45,19 @@ namespace Leetcode
             }
 
             return head.next;
+        }
+        public ListNode MergeKLists(ListNode[] lists)
+        {
+            if (lists.Length == 0) return null;
+            return MergeKLists(lists, 0, lists.Length - 1);
+        }
+        public ListNode MergeKLists(ListNode[] lists,int start,int end)
+        {
+            int l = end - start+1;
+            if (l == 1) return lists[0];
+            if (l == 2) return MergeTwoLists(lists[0], lists[1]);
+
+            return MergeTwoLists(MergeKLists(lists, 0, l / 2-1), MergeKLists(lists, l / 2, l - 1));    
         }
     }
 }
