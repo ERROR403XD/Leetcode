@@ -22,9 +22,8 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            RemoveElementClass test = new RemoveElementClass();
-
-            test.RemoveElement(testArray, 3);
+            LongestValidParenthesesClass test = new LongestValidParenthesesClass();
+            test.LongestValidParentheses("()");
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             Console.WriteLine(testString2.Substring(12));
 

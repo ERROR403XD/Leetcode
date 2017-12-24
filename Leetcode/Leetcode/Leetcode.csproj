@@ -52,6 +52,7 @@
     <Compile Include="01-20\PalindromeNumber.cs" />
     <Compile Include="GenerateParentheses.cs" />
     <Compile Include="ImplementStrStr.cs" />
+    <Compile Include="LongestValidParentheses.cs" />
     <Compile Include="MergeTwoSortedLists.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="01-20\PublicSource.cs" />
