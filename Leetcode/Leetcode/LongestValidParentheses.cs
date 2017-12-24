@@ -56,6 +56,7 @@ namespace Leetcode
         {
             if (s.Length <= 1) return 0;
             Stack<int> index = new Stack<int>();
+            index.Push(-1);
             int max = 0;
             for(int i = 0;i<s.Length;i++)
             {
@@ -68,9 +69,8 @@ namespace Leetcode
                     if(index.Count!=0)
                     {
                         index.Pop();
-                        if (index.Count == 0) index.Push(-1);
-                        max = Math.Max(max, i - index.Peek());
-                        if(index.Peek()==-1)index.Pop();   
+                        if (index.Count == 0) index.Push(i);
+                        max = Math.Max(max, i - index.Peek());  
                     }  
                 }
             }
