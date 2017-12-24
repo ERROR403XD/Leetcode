@@ -8,6 +8,7 @@ namespace Leetcode
 {
     class LongestValidParenthesesClass
     {
+        /*
         public int LongestValidParentheses(string s)
         {
             int leftNum = 0;
@@ -49,6 +50,32 @@ namespace Leetcode
                 }
             }
             return max;
+        }
+        */
+        public int LongestValidParentheses(string s)
+        {
+            if (s.Length <= 1) return 0;
+            Stack<int> index = new Stack<int>();
+            int max = 0;
+            for(int i = 0;i<s.Length;i++)
+            {
+                if(s[i]=='(')
+                {
+                    index.Push(i);  
+                }
+                else
+                {
+                    if(index.Count!=0)
+                    {
+                        index.Pop();
+                        if (index.Count == 0) index.Push(-1);
+                        max = Math.Max(max, i - index.Peek());
+                        if(index.Peek()==-1)index.Pop();   
+                    }  
+                }
+            }
+            return max;
+
         }
     }
 }

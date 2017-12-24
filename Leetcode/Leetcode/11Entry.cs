@@ -23,7 +23,7 @@ namespace Leetcode
             head.next = end;
 
             LongestValidParenthesesClass test = new LongestValidParenthesesClass();
-            test.LongestValidParentheses("()");
+            test.LongestValidParentheses("())");
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             Console.WriteLine(testString2.Substring(12));
 
