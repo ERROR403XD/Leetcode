@@ -10,7 +10,15 @@ namespace Leetcode
     {
         public int StrStr(string haystack, string needle)
         {
-            return 00;
+            int res = 0;
+            for (; res < haystack.Length - needle.Length + 1; res++)
+            {
+                if(needle == haystack.Substring(res,needle.Length))
+                {
+                    return res;
+                }  
+            }
+            return-1;
         }
         
     }

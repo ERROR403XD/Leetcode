@@ -11,20 +11,20 @@ namespace Leetcode
         static void Main(string[] args)
         {
 
-            string testString = "a";
+            string testString = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             string testString2 = "ab*b";
-            int[] testArray = new int[] {2};
+            int[] testArray = new int[] {1,2,3};
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};
+            string[] testStringArray = new string[] { "abc", "def", "qwe" };
 
             int testInt = -2147447412;
             ListNode head = new ListNode(1);
             ListNode end = new ListNode(2);
             head.next = end;
 
-            RemoveElementClass test = new RemoveElementClass();
-
-            test.RemoveElement(testArray, 3);
+            NextPermutationClass test = new NextPermutationClass();
+            test.NextPermutation(testArray);
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             Console.WriteLine(testString2.Substring(12));
 
