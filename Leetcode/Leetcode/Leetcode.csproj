@@ -53,6 +53,7 @@
     <Compile Include="DivideTwoIntegers.cs" />
     <Compile Include="GenerateParentheses.cs" />
     <Compile Include="ImplementStrStr.cs" />
+    <Compile Include="LongestValidParentheses.cs" />
     <Compile Include="MergeTwoSortedLists.cs" />
     <Compile Include="NextPermutation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
