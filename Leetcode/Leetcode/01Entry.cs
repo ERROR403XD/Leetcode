@@ -13,20 +13,32 @@ namespace Leetcode
 
             string testString = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             string testString2 = "ab*b";
-            int[] testArray = new int[] {4, 5, 6, 7, 0, 1, 2};
+            char[,] testCharBoard = new char[9, 9]{{'.', '.', '9', '7', '4', '8', '.', '.', '.'},
+                                                    {'7', '.', '.', '.', '.', '.', '.', '.', '.'},
+                                                    {'.', '2', '.', '1', '.', '9', '.', '.', '.'},
+                                                    {'.', '.', '7', '.', '.', '.', '2', '4', '.'},
+                                                    {'.', '6', '4', '.', '1', '.', '5', '9', '.'},
+                                                    {'.', '9', '8', '.', '.', '.', '3', '.', '.'},
+                                                    {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
+                                                    {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
+                                                    {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
+            int[] testArray = new int[] {5,7,7,8,8,10};
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};
             string[] testStringArray = new string[] { "abc", "def", "qwe" };
 
+            List<int> list = new List<int>();
+            list.Add(2);
+            list.Remove(3);
             int testInt = -2147447412;
             ListNode head = new ListNode(1);
             ListNode end = new ListNode(2);
             head.next = end;
 
-            Search_in_Rotated_Sorted_Array test = new Search_in_Rotated_Sorted_Array();
-            test.Search(testArray, 0);
+            Sudoku test = new Sudoku();
+            test.SolveSudoku(testCharBoard);
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
-            Console.WriteLine(testString2.Substring(12));
+            //Console.WriteLine(testString2.Substring(12));
 
             Console.ReadKey();
         }
