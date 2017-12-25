@@ -13,7 +13,7 @@ namespace Leetcode
 
             string testString = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             string testString2 = "ab*b";
-            int[] testArray = new int[] {1,2,3};
+            int[] testArray = new int[] {4, 5, 6, 7, 0, 1, 2};
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};
             string[] testStringArray = new string[] { "abc", "def", "qwe" };
@@ -23,8 +23,8 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            NextPermutationClass test = new NextPermutationClass();
-            test.NextPermutation(testArray);
+            Search_in_Rotated_Sorted_Array test = new Search_in_Rotated_Sorted_Array();
+            test.Search(testArray, 0);
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             Console.WriteLine(testString2.Substring(12));
 

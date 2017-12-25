@@ -67,6 +67,7 @@
     <Compile Include="01-20\ValidParentheses.cs" />
     <Compile Include="RemoveDuplicatesfromSortedArray.cs" />
     <Compile Include="RemoveElement.cs" />
+    <Compile Include="Search in Rotated Sorted Array.cs" />
     <Compile Include="SubstringwithConcatenationofAllWords.cs" />
     <Compile Include="SwapNodes.cs" />
   </ItemGroup>
