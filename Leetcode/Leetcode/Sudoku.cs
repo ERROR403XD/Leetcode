@@ -58,7 +58,82 @@ namespace Leetcode
 
             return true;
         }
+
         public void SolveSudoku(char[,] board)
+        {
+            SolveSudoku(board, 0, 0);     
+        }
+        public bool SolveSudoku(char[,] board,int i,int j)
+        {
+            if(board[i,j]!='.')
+            {
+                if (i == 8 && j == 8) return true;
+                if (j < 8) j++;
+                else
+                {
+                    i++;
+                    j = 0;
+                }
+                return SolveSudoku(board, i, j);
+            }
+            string digs = "123456789";
+            for(int dig = 0;dig<9;dig++)
+            {
+                board[i, j] = digs[dig];
+                //Print(board, i, j);
+                if (!IsValid(board, i, j)) continue;
+                if (i == 8 && j == 8) return true;
+
+                int newI = i, newJ = j;
+                if (j < 8) newJ++;
+                else
+                {
+                    newJ = 0;newI++;
+                }
+
+                if (SolveSudoku(board, newI, newJ)) return true;
+
+            }
+            board[i, j] = '.';
+            return false;
+
+        }
+        private bool IsValid(char[,] board,int i,int j)
+        {
+            char compare = board[i, j];
+            for(int temp = 0;temp<9;temp++)
+            {
+                if (temp != i && board[temp, j] == compare)return false;
+                if (temp != j && board[i, temp] == compare) return false;    
+            }
+            int horStart = (i / 3) * 3;
+            int verStart = (j / 3) * 3;
+            for(int hor = horStart;hor<horStart+3;hor++)
+            {
+                for(int ver = verStart;ver<verStart+3;ver++)
+                {
+                    if (hor != i && ver != j && board[hor, ver] == compare) return false;
+                }
+            }
+            return true;
+        }
+        private void Print(char[,] board,int k,int l)
+        {
+            //Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine((k + 1).ToString() + "  " + (l + 1).ToString());
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    Console.Write(board[i, j].ToString() + " ");
+                }
+
+                Console.WriteLine();
+            }
+        }
+        /*
+                public void SolveSudoku(char[,] board)
         {
             
             List<char> stanard = new List<char>() { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
@@ -155,6 +230,8 @@ namespace Leetcode
                 }
                 Console.WriteLine();
             }
-        }
+        } 
+             */
+
     }
 }
