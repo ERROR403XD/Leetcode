@@ -50,13 +50,14 @@
     <Compile Include="01-20\LongestSubstringWithoutRepeatingCharacters.cs" />
     <Compile Include="01-20\MedianofTwoSortedArrays.cs" />
     <Compile Include="01-20\PalindromeNumber.cs" />
-    <Compile Include="Count and Say.cs" />
-    <Compile Include="DivideTwoIntegers.cs" />
-    <Compile Include="GenerateParentheses.cs" />
-    <Compile Include="ImplementStrStr.cs" />
-    <Compile Include="LongestValidParentheses.cs" />
-    <Compile Include="MergeTwoSortedLists.cs" />
-    <Compile Include="NextPermutation.cs" />
+    <Compile Include="21-40\Combination Sum.cs" />
+    <Compile Include="21-40\Count and Say.cs" />
+    <Compile Include="21-40\DivideTwoIntegers.cs" />
+    <Compile Include="21-40\GenerateParentheses.cs" />
+    <Compile Include="21-40\ImplementStrStr.cs" />
+    <Compile Include="21-40\LongestValidParentheses.cs" />
+    <Compile Include="21-40\MergeTwoSortedLists.cs" />
+    <Compile Include="21-40\NextPermutation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="02PublicSource.cs" />
     <Compile Include="01-20\RegularExpressionMatching.cs" />
@@ -66,14 +67,14 @@
     <Compile Include="01-20\StringtoInteger.cs" />
     <Compile Include="01-20\ThreeSum.cs" />
     <Compile Include="01-20\ValidParentheses.cs" />
-    <Compile Include="RemoveDuplicatesfromSortedArray.cs" />
-    <Compile Include="RemoveElement.cs" />
-    <Compile Include="Search for a Range.cs" />
-    <Compile Include="Search in Rotated Sorted Array.cs" />
-    <Compile Include="Search Insert Position.cs" />
-    <Compile Include="SubstringwithConcatenationofAllWords.cs" />
-    <Compile Include="SwapNodes.cs" />
-    <Compile Include="Sudoku.cs" />
+    <Compile Include="21-40\RemoveDuplicatesfromSortedArray.cs" />
+    <Compile Include="21-40\RemoveElement.cs" />
+    <Compile Include="21-40\Search for a Range.cs" />
+    <Compile Include="21-40\Search in Rotated Sorted Array.cs" />
+    <Compile Include="21-40\Search Insert Position.cs" />
+    <Compile Include="21-40\SubstringwithConcatenationofAllWords.cs" />
+    <Compile Include="21-40\SwapNodes.cs" />
+    <Compile Include="21-40\Sudoku.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
