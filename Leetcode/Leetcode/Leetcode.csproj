@@ -50,6 +50,7 @@
     <Compile Include="01-20\LongestSubstringWithoutRepeatingCharacters.cs" />
     <Compile Include="01-20\MedianofTwoSortedArrays.cs" />
     <Compile Include="01-20\PalindromeNumber.cs" />
+    <Compile Include="Count and Say.cs" />
     <Compile Include="DivideTwoIntegers.cs" />
     <Compile Include="GenerateParentheses.cs" />
     <Compile Include="ImplementStrStr.cs" />

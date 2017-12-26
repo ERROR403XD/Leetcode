@@ -35,10 +35,14 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            Sudoku test = new Sudoku();
-            test.SolveSudoku(testCharBoard);
+            Count_and_Say test = new Count_and_Say();
+            Console.WriteLine(test.CountAndSay(6));
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             //Console.WriteLine(testString2.Substring(12));
+
+            double t = 0.5, r = 0.005, a = 0.0001;
+            double c = 0.01;
+            Console.WriteLine(t / ((r + t / c) / (1 + a) - r));
 
             Console.ReadKey();
         }
