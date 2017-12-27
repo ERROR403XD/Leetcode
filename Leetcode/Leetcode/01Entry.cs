@@ -22,7 +22,7 @@ namespace Leetcode
                                                     {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
                                                     {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
                                                     {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
-            int[] testArray = new int[] {2,3,6,7};
+            int[] testArray = new int[] {1,2,0};
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};
             string[] testStringArray = new string[] { "abc", "def", "qwe" };
@@ -35,8 +35,8 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            Combination_Sum test = new Combination_Sum();
-            test.CombinationSum(testArray, 7);
+            First_Missing_Positive test = new First_Missing_Positive();
+            test.FirstMissingPositive(testArray);
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             //Console.WriteLine(testString2.Substring(12));
 
