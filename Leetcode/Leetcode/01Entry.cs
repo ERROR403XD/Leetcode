@@ -22,7 +22,7 @@ namespace Leetcode
                                                     {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
                                                     {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
                                                     {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
-            int[] testArray = new int[] {1,2,0};
+            int[] testArray = new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
             int[] testArrayM = new int[] {3};
             int[] testArrayN = new int[] {1,2};
             string[] testStringArray = new string[] { "abc", "def", "qwe" };
@@ -35,8 +35,8 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            First_Missing_Positive test = new First_Missing_Positive();
-            test.FirstMissingPositive(testArray);
+            Trapping_Rain_Water test = new Trapping_Rain_Water();
+            test.Trap(testArray);
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             //Console.WriteLine(testString2.Substring(12));
 
