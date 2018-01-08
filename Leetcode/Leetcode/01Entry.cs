@@ -36,7 +36,7 @@ namespace Leetcode
             head.next = end;
 
             Multiply_Strings test = new Multiply_Strings();
-            Console.WriteLine(test.Multiply("9413","0"));      
+            Console.WriteLine(test.Multiply("9413","123"));      
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             //Console.WriteLine(testString2.Substring(12));
 

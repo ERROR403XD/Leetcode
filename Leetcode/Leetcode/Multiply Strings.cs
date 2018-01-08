@@ -82,7 +82,33 @@ namespace Leetcode
         */
         public string Multiply(string num1, string num2)
         {
-
+            if (num1 == "0" || num2 == "0") return "0";
+            string res = "";
+            int[] buffer = new int[num1.Length + num2.Length];
+            int compare = num1.Length + num2.Length - 2;
+            int carry = 0;
+            for(int i = 0;i<num1.Length;i++)
+            {
+                for(int j = 0;j<num2.Length;j++)
+                {
+                    buffer[compare - i - j] += (num1[i] - '0') * (num2[j] - '0');
+                }
+            }
+            for(int i = 0;i<buffer.Length;i++)
+            {
+                buffer[i] += carry;
+                carry = buffer[i] / 10;
+                buffer[i] %= 10;
+            }
+            int t = buffer.Length - 1;
+            while (buffer[t] == 0) t--;
+            if (t < 0) return "0";
+            while(t>=0)
+            {
+                res += ((char)(buffer[t] + '0')).ToString();
+                t--;
+            }
+            return res;   
         }
     }
 }
