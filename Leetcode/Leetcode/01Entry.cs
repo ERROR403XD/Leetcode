@@ -11,7 +11,7 @@ namespace Leetcode
         static void Main(string[] args)
         {
 
-            string testString = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            string testString = "1234";
             string testString2 = "ab*b";
             char[,] testCharBoard = new char[9, 9]{{'.', '.', '9', '7', '4', '8', '.', '.', '.'},
                                                     {'7', '.', '.', '.', '.', '.', '.', '.', '.'},
@@ -35,8 +35,8 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            Trapping_Rain_Water test = new Trapping_Rain_Water();
-            test.Trap(testArray);
+            Multiply_Strings test = new Multiply_Strings();
+            Console.WriteLine(test.Multiply("9413","0"));      
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             //Console.WriteLine(testString2.Substring(12));
 
