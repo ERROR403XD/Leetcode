@@ -35,8 +35,8 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            Multiply_Strings test = new Multiply_Strings();
-            Console.WriteLine(test.Multiply("9413","123"));      
+            Wildcard_Matching test = new Wildcard_Matching();
+            Console.WriteLine(test.IsMatch("aab","?*b"));   
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             //Console.WriteLine(testString2.Substring(12));
 
