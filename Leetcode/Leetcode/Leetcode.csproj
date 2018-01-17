@@ -59,6 +59,7 @@
     <Compile Include="21-40\MergeTwoSortedLists.cs" />
     <Compile Include="21-40\NextPermutation.cs" />
     <Compile Include="First Missing Positive.cs" />
+    <Compile Include="Jump Game II.cs" />
     <Compile Include="Multiply Strings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="02PublicSource.cs" />
