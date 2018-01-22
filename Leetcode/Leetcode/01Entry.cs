@@ -22,7 +22,7 @@ namespace Leetcode
                                                     {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
                                                     {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
                                                     {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
-            int[] testArray = new int[] {-2,-1};
+            int[] testArray = new int[] {0,2,3};
             int[] testEqual = new int[] { 1, 2, 2 };
             int[] testArrayM = new int[] { 3 };
             int[] testArrayN = new int[] { 1, 2 };
@@ -46,8 +46,8 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            Spiral_Matrix test = new Spiral_Matrix();
-            test.SpiralOrder(testMat);
+            Jump_Game_II test = new Jump_Game_II();
+            test.CanJump(testArray);
             
             
             

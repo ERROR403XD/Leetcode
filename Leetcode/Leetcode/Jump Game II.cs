@@ -53,23 +53,23 @@ namespace Leetcode
         public bool CanJump(int[] nums)
         {
             bool res = false;    
-            int reach = nums[0];
             for(int i = 0;i<nums.Length;i++)
             {
                 nums[i] = i + nums[i];
             }
-            int j = 0;
-            while(j<reach)
+            int maxreach = nums[0];
+            bool[] temp = new bool[nums.Length];
+            for(int i = 0;i<nums.Length;i++)
             {
-                if (j >= nums.Length) return true;
-                int maxreach = nums[j];
-                for(int k = j;k<=nums[j];k++)
-                {
-                    if (nums[k] > maxreach) maxreach = nums[k];
-                }
-                j = maxreach;
-
+                if (i <= maxreach) temp[i] = true;
+                else break;
+                if (nums[i] > maxreach) maxreach = nums[i];   
             }
+            for(int i = 0;i<nums.Length;i++)
+            {
+                if (nums[i] >= nums.Length - 1 && temp[i]) return true;   
+            }
+
             return res;
         }
 
