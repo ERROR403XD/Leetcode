@@ -50,6 +50,28 @@ namespace Leetcode
             return step;
 
         }
+        public bool CanJump(int[] nums)
+        {
+            bool res = false;    
+            int reach = nums[0];
+            for(int i = 0;i<nums.Length;i++)
+            {
+                nums[i] = i + nums[i];
+            }
+            int j = 0;
+            while(j<reach)
+            {
+                if (j >= nums.Length) return true;
+                int maxreach = nums[j];
+                for(int k = j;k<=nums[j];k++)
+                {
+                    if (nums[k] > maxreach) maxreach = nums[k];
+                }
+                j = maxreach;
+
+            }
+            return res;
+        }
 
     }
 }
