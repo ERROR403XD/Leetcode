@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -59,8 +74,11 @@
     <Compile Include="21-40\MergeTwoSortedLists.cs" />
     <Compile Include="21-40\NextPermutation.cs" />
     <Compile Include="First Missing Positive.cs" />
+    <Compile Include="Group Anagrams.cs" />
     <Compile Include="Jump Game II.cs" />
     <Compile Include="Multiply Strings.cs" />
+    <Compile Include="N-Queens.cs" />
+    <Compile Include="Permutations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="02PublicSource.cs" />
     <Compile Include="01-20\RegularExpressionMatching.cs" />
@@ -78,11 +96,24 @@
     <Compile Include="21-40\SubstringwithConcatenationofAllWords.cs" />
     <Compile Include="21-40\SwapNodes.cs" />
     <Compile Include="21-40\Sudoku.cs" />
+    <Compile Include="Rotate Image.cs" />
     <Compile Include="Trapping Rain Water.cs" />
     <Compile Include="Wildcard Matching.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

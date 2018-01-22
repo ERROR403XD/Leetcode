@@ -22,11 +22,21 @@ namespace Leetcode
                                                     {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
                                                     {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
                                                     {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
-            int[] testArray = new int[] {1,3,54,1,2};
-            int[] testArrayM = new int[] {3};
-            int[] testArrayN = new int[] {1,2};
+            int[] testArray = new int[] { 1, 2, 2 };
+            int[] testEqual = new int[] { 1, 2, 2 };
+            int[] testArrayM = new int[] { 3 };
+            int[] testArrayN = new int[] { 1, 2 };
             string[] testStringArray = new string[] { "abc", "def", "qwe" };
-
+            string acd = "ifua";
+            if(acd == "ifua")
+            {
+                string bbb = acd;
+                char[] ca = bbb.ToCharArray();
+                Array.Sort(ca);
+                string sss = new string(ca);
+                Console.WriteLine(sss);
+            }
+            
             List<int> list = new List<int>();
             list.Add(2);
             list.Remove(3);
@@ -35,8 +45,10 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            Jump_Game_II test = new Jump_Game_II();
-            Console.WriteLine(test.Jump(testArray));
+            N_Queens test = new N_Queens();
+            test.SolveNQueens(4);
+            
+            
             
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             //Console.WriteLine(testString2.Substring(12));
