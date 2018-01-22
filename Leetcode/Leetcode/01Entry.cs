@@ -22,10 +22,11 @@ namespace Leetcode
                                                     {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
                                                     {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
                                                     {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
-            int[] testArray = new int[] { 1, 2, 2 };
+            int[] testArray = new int[] {-2,-1};
             int[] testEqual = new int[] { 1, 2, 2 };
             int[] testArrayM = new int[] { 3 };
             int[] testArrayN = new int[] { 1, 2 };
+            int[,] testMat = new int[,] { {1,2,3 },{4,5,6 },{7,8,9 },{10,11,12 } };
             string[] testStringArray = new string[] { "abc", "def", "qwe" };
             string acd = "ifua";
             if(acd == "ifua")
@@ -45,17 +46,18 @@ namespace Leetcode
             ListNode end = new ListNode(2);
             head.next = end;
 
-            N_Queens test = new N_Queens();
-            test.SolveNQueens(4);
+            Spiral_Matrix test = new Spiral_Matrix();
+            test.SpiralOrder(testMat);
             
             
             
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             //Console.WriteLine(testString2.Substring(12));
 
-            double t = 0.5, r = 0.005, a = 0.0001;
-            double c = 0.01;
-            Console.WriteLine(t / ((r + t / c) / (1 + a) - r));
+            double t = 4.5, r = 0.002, a = 1.0/10000;
+            double c = 0.735;
+            Console.WriteLine(c-t/(((r+t/c)/(1+a))-r));
+            Console.WriteLine(c / 10000);
 
             Console.ReadKey();
         }

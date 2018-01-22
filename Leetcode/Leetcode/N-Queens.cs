@@ -8,6 +8,32 @@ namespace Leetcode
 {
     class N_Queens
     {
+        public int TotalNQueens(int n)
+        {
+            int res = 0;
+            if (n <= 0) return res;
+            int[] pos = new int[n];
+            BackTrack(ref res, pos, 0, n);
+            return res;         
+        }
+        private void BackTrack(ref int  res, int[] pos, int row, int n)
+        {
+            if (row == n)
+            {
+                res++;
+            }
+            else
+            {
+                for (int col = 0; col < n; col++)
+                {
+                    pos[row] = col;
+                    if (IsVaild(pos, row))
+                    {
+                        BackTrack(ref res, pos, row + 1, n);
+                    }
+                }
+            }  
+        }
         public IList<IList<string>> SolveNQueens(int n)
         {
             List<IList<string>> res = new List<IList<string>>();

@@ -76,6 +76,7 @@
     <Compile Include="First Missing Positive.cs" />
     <Compile Include="Group Anagrams.cs" />
     <Compile Include="Jump Game II.cs" />
+    <Compile Include="Maximum Subarray.cs" />
     <Compile Include="Multiply Strings.cs" />
     <Compile Include="N-Queens.cs" />
     <Compile Include="Permutations.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="21-40\SwapNodes.cs" />
     <Compile Include="21-40\Sudoku.cs" />
     <Compile Include="Rotate Image.cs" />
+    <Compile Include="Spiral Matrix.cs" />
     <Compile Include="Trapping Rain Water.cs" />
     <Compile Include="Wildcard Matching.cs" />
   </ItemGroup>
