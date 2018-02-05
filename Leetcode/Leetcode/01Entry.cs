@@ -45,9 +45,11 @@ namespace Leetcode
             ListNode head = new ListNode(1);
             ListNode end = new ListNode(2);
             head.next = end;
-
-            Jump_Game_II test = new Jump_Game_II();
-            test.CanJump(testArray);
+            
+            //Interval[] testIntervals = new Interval[] {new Interval(1,3), new Interval(5, 7), new Interval(12,16), new Interval(17,21), new Interval(26, 30) };
+            List<Interval> testIntervals = new List<Interval>() { new Interval(1, 3), new Interval(5, 7), new Interval(12, 16), new Interval(17, 21), new Interval(26, 30) };
+            Merge_Intervals test = new Merge_Intervals();
+            test.Insert(testIntervals, new Interval(6, 19));
             
             
             
