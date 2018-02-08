@@ -28,15 +28,7 @@ namespace Leetcode
             int[] testArrayN = new int[] { 1, 2 };
             int[,] testMat = new int[,] { {1,2,3 },{4,5,6 },{7,8,9 },{10,11,12 } };
             string[] testStringArray = new string[] { "abc", "def", "qwe" };
-            string acd = "ifua";
-            if(acd == "ifua")
-            {
-                string bbb = acd;
-                char[] ca = bbb.ToCharArray();
-                Array.Sort(ca);
-                string sss = new string(ca);
-                Console.WriteLine(sss);
-            }
+
             
             List<int> list = new List<int>();
             list.Add(2);
@@ -47,9 +39,10 @@ namespace Leetcode
             head.next = end;
             
             //Interval[] testIntervals = new Interval[] {new Interval(1,3), new Interval(5, 7), new Interval(12,16), new Interval(17,21), new Interval(26, 30) };
-            List<Interval> testIntervals = new List<Interval>() { new Interval(1, 3), new Interval(5, 7), new Interval(12, 16), new Interval(17, 21), new Interval(26, 30) };
-            Merge_Intervals test = new Merge_Intervals();
-            test.Insert(testIntervals, new Interval(6, 19));
+            List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
+
+            Permutation_Sequence test = new Permutation_Sequence();
+            Console.WriteLine(test.GetPermutation(4, 2));
             
             
             

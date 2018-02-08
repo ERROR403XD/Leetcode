@@ -115,46 +115,39 @@ namespace Leetcode
 
         }
 
-        public void Insert(IList<Interval> given,Interval target)
+        public IList<Interval> Insert(IList<Interval> given,Interval target)
         {
+            List<Interval> res = new List<Interval>(given);
             bool state = false;//false :waiting for insert start,true:waiting for insert end
-            for(int i =0;i<given.Count;i++)
+            for(int i =0;i<res.Count;i++)
             {
-                if(!state && target.start<=given[i].start)
+                if(!state)
                 {
-                    state = true;
-                    if(i>0&&target.start<=given[i-1].end)
+                    if (target.start < res[i].start)
                     {
-                        given[i - 1].end = target.end;
-                        target = given[i - 1];      
+                        res.Insert(i, target);
+                        state = true;
                     }
-                    else
+                    else if (target.start <= res[i].end)
                     {
-                        given.Insert(i, target);
-                        i++;
+                        if (target.end > res[i].end) res[i].end = target.end;
+                        state = true;
                     }
-                    
+                    else continue;
                 }
-                if (state)
+                else
                 {
-                    if (target.end < given[i].start) return;
-                    else if (target.end <= given[i].end)
-                    {
-                        target.end = given[i].end;
-                        given.Remove(given[i]);
-                        return;
-                    }
-                    else
-                    {
-                        given.Remove(given[i]);
-                        i--;
-                    }
-                } 
+                    if (res[i].start > res[i - 1].end) return res;
+                    res[i - 1].end = Math.Max(res[i - 1].end, res[i].end);
+                    res.RemoveAt(i);
+                    i--;
+                }
             }
             if (!state)
             {
-                given.Add(target);
+                res.Add(target);
             }
+            return res;
 
         }
 
