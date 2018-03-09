@@ -83,7 +83,10 @@
     <Compile Include="041-060\N-Queens.cs" />
     <Compile Include="041-060\Permutation Sequence.cs" />
     <Compile Include="041-060\Permutations.cs" />
+    <Compile Include="Add Binary.cs" />
+    <Compile Include="Climbing Stairs.cs" />
     <Compile Include="Minimum Path Sum.cs" />
+    <Compile Include="Plus One.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="02PublicSource.cs" />
     <Compile Include="001-020\RegularExpressionMatching.cs" />
@@ -106,6 +109,8 @@
     <Compile Include="041-060\Trapping Rain Water.cs" />
     <Compile Include="041-060\Wildcard Matching.cs" />
     <Compile Include="Rotate List.cs" />
+    <Compile Include="Sqrt.cs" />
+    <Compile Include="Text Justification.cs" />
     <Compile Include="Unique Paths.cs" />
     <Compile Include="Valid Number.cs" />
   </ItemGroup>
