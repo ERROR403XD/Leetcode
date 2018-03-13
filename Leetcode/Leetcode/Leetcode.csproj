@@ -85,6 +85,7 @@
     <Compile Include="041-060\Permutations.cs" />
     <Compile Include="Add Binary.cs" />
     <Compile Include="Climbing Stairs.cs" />
+    <Compile Include="Edit Distance.cs" />
     <Compile Include="Minimum Path Sum.cs" />
     <Compile Include="Plus One.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +110,9 @@
     <Compile Include="041-060\Trapping Rain Water.cs" />
     <Compile Include="041-060\Wildcard Matching.cs" />
     <Compile Include="Rotate List.cs" />
+    <Compile Include="Search a 2D Matrix.cs" />
+    <Compile Include="Set Matrix Zeroes.cs" />
+    <Compile Include="Simplify Path.cs" />
     <Compile Include="Sqrt.cs" />
     <Compile Include="Text Justification.cs" />
     <Compile Include="Unique Paths.cs" />

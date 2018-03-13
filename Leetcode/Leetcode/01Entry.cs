@@ -13,6 +13,10 @@ namespace Leetcode
 
             string testString = "1234";
             string testString2 = "ab*b";
+            int[,] matrix = new int[,] { {1,3,5,7},
+                                         {10,11,16,20},
+                                         {23,30,34,50},
+                                            };
             char[,] testCharBoard = new char[9, 9]{{'.', '.', '9', '7', '4', '8', '.', '.', '.'},
                                                     {'7', '.', '.', '.', '.', '.', '.', '.', '.'},
                                                     {'.', '2', '.', '1', '.', '9', '.', '.', '.'},
@@ -41,8 +45,12 @@ namespace Leetcode
             //Interval[] testIntervals = new Interval[] {new Interval(1,3), new Interval(5, 7), new Interval(12,16), new Interval(17,21), new Interval(26, 30) };
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
-            Text_Justification test = new Text_Justification();
-            test.FullJustify(testStrs, 12);
+
+
+            Search_a_2D_Matrix test = new Search_a_2D_Matrix();
+            test.SearchMatrix(matrix, 3);
+
+
 
             
             
