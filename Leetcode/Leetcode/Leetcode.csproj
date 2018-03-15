@@ -113,6 +113,7 @@
     <Compile Include="Search a 2D Matrix.cs" />
     <Compile Include="Set Matrix Zeroes.cs" />
     <Compile Include="Simplify Path.cs" />
+    <Compile Include="Sort Colors.cs" />
     <Compile Include="Sqrt.cs" />
     <Compile Include="Text Justification.cs" />
     <Compile Include="Unique Paths.cs" />

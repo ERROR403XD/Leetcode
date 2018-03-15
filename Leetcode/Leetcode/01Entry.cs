@@ -26,7 +26,7 @@ namespace Leetcode
                                                     {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
                                                     {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
                                                     {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
-            int[] testArray = new int[] {0,2,3};
+            int[] testArray = new int[] {2,0};
             int[] testEqual = new int[] { 1, 2, 2 };
             int[] testArrayM = new int[] { 3 };
             int[] testArrayN = new int[] { 1, 2 };
@@ -47,8 +47,8 @@ namespace Leetcode
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
 
-            Search_a_2D_Matrix test = new Search_a_2D_Matrix();
-            test.SearchMatrix(matrix, 3);
+            Sort_Colors test = new Sort_Colors();
+            test.SortColorsConstSpace(testArray);
 
 
 
