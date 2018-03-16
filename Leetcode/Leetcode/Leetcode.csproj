@@ -87,6 +87,7 @@
     <Compile Include="Climbing Stairs.cs" />
     <Compile Include="Edit Distance.cs" />
     <Compile Include="Minimum Path Sum.cs" />
+    <Compile Include="Minimum Window Substring.cs" />
     <Compile Include="Plus One.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="02PublicSource.cs" />

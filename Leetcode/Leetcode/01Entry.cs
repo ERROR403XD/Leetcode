@@ -47,8 +47,8 @@ namespace Leetcode
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
 
-            Sort_Colors test = new Sort_Colors();
-            test.SortColorsConstSpace(testArray);
+            Minimum_Window_Substring test = new Minimum_Window_Substring();
+            test.minWindow("ADOBECODEBANC", "ABC");
 
 
 
