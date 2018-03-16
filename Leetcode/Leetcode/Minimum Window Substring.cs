@@ -8,7 +8,7 @@ namespace Leetcode
 {
     class Minimum_Window_Substring
     {
-        public string minWindow(string S, string T)
+        public string MinWindow(string S, string T)
         {
             int[] srcHash = new int[255];
             // 记录目标字符串每个字母出现次数
