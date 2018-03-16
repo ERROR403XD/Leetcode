@@ -48,7 +48,7 @@ namespace Leetcode
 
 
             Minimum_Window_Substring test = new Minimum_Window_Substring();
-            test.MinWindow("ADOBECODEBANC", "ABC");
+            test.MinWindow("aaaacbcca", "ab");
 
 
 

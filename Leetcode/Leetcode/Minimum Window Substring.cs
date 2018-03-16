@@ -8,6 +8,43 @@ namespace Leetcode
 {
     class Minimum_Window_Substring
     {
+        public string MinWindow(string s,string t)
+        {
+            int[] tHash = new int[255];
+            foreach(char c in t)
+            {
+                tHash[c]++;
+            }
+            int start = 0, i = 0;
+            int[] sHash = new int[255];
+            int found = 0;
+            int begin = -1,  minlength = s.Length;
+            for(i=0;i<s.Length;i++)
+            {
+                sHash[s[i]]++;
+                if (sHash[s[i]] <= tHash[s[i]]) found++;
+
+                if(found==t.Length)
+                {
+                    while(start<i && sHash[s[start]]>tHash[s[start]])
+                    {
+                        sHash[s[start]]--;
+                        start++;
+                    }
+                    if(i-start<minlength)
+                    {
+                        minlength = i - start;
+                        begin = start;
+                    }
+
+                    sHash[s[start]]--;
+                    found--;
+                    start++;
+                }
+            }
+            return (begin == -1) ? "" : s.Substring(begin, minlength+1);
+        }
+        /*
         public string MinWindow(string S, string T)
         {
             int[] srcHash = new int[255];
@@ -52,6 +89,6 @@ namespace Leetcode
             }
             // 如果begin没有修改过，返回空
             return begin == -1 ? "" : S.Substring(begin, end - begin + 1);
-        }
+        }*/
     }
 }
