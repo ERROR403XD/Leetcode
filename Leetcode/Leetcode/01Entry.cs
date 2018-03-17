@@ -47,8 +47,8 @@ namespace Leetcode
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
 
-            Minimum_Window_Substring test = new Minimum_Window_Substring();
-            test.MinWindow("aaaacbcca", "ab");
+            Subsets test = new Subsets();
+            test.Subsets_(testArray);
 
 
 
