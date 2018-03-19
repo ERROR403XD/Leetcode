@@ -8,7 +8,28 @@ namespace Leetcode
 {
     class Remove_Duplicates_from_Sorted_List
     {
-        public ListNode DeleteDuplicates(ListNode head)
+        public ListNode DeleteDuplicatesI(ListNode head)
+        {
+            if (head == null || head.next == null) return head;
+
+            ListNode res = head;
+            int toCom = head.val;
+            while (head.next != null)
+            {
+                if (head.next.val == toCom)
+                {
+                    head.next = head.next.next;
+                }
+                else
+                {
+                    head = head.next;
+                    toCom = head.val;
+                }
+            }
+            return res;
+
+        }
+        public ListNode DeleteDuplicatesII(ListNode head)
         {
             if (head == null || head.next == null) return head;
 
