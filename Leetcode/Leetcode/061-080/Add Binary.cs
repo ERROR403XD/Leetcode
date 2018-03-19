@@ -24,7 +24,7 @@ namespace Leetcode
                 int dl = 0;
                 int ds = 0;
                 if (l[l.Length - i] == one) dl = 1;
-                if (i <= s.Length && s[s.Length - i]==one) ds = 1;
+                if (i <= s.Length && s[s.Length - i]==one) ds = 1; 
 
                 int k = dl + ds + ((plus) ? 1 : 0);
                 switch(k)

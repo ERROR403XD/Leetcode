@@ -26,7 +26,7 @@ namespace Leetcode
                                                     {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
                                                     {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
                                                     {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
-            int[] testArray = new int[] {2,0};
+            int[] testArray = new int[] {-9, -9, -9, -8, -8, -7, -7, -7, -7, -6, -6, -6, -6, -6, -6, -6, -6, -6, -5, -5, -5, -5, -5, -4, -4, -4, -3, -3, -3, -3, -3, -3, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -1, -1, -1, -1, -1, -1, 0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7, 8, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, -10, -9, -9, -9, -9};
             int[] testEqual = new int[] { 1, 2, 2 };
             int[] testArrayM = new int[] { 3 };
             int[] testArrayN = new int[] { 1, 2 };
@@ -39,17 +39,26 @@ namespace Leetcode
             list.Remove(3);
             int testInt = -2147447412;
             ListNode head = new ListNode(1);
-            ListNode end = new ListNode(2);
-            head.next = end;
-            
+            ListNode end1 = new ListNode(1);
+            ListNode end2 = new ListNode(2);
+            ListNode end3 = new ListNode(2);
+            ListNode end4 = new ListNode(4);
+            ListNode end5 = new ListNode(4);
+            ListNode end6 = new ListNode(4);
+            head.next = end1;
+            end1.next = end2;
+            //end2.next = end3;
+            end3.next = end4;
+            end4.next = end5;
+            end5.next = end6;
+
             //Interval[] testIntervals = new Interval[] {new Interval(1,3), new Interval(5, 7), new Interval(12,16), new Interval(17,21), new Interval(26, 30) };
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
 
-            Subsets test = new Subsets();
-            test.Subsets_(testArray);
-
+            Remove_Duplicates_from_Sorted_List test = new Remove_Duplicates_from_Sorted_List();
+            test.DeleteDuplicates(head);
 
 
             

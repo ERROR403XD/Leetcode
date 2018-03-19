@@ -26,21 +26,25 @@ namespace Leetcode
         public int RemoveDuplicatesII(int[] nums)
         {
             if (nums.Length <= 1) return nums.Length;
-            int res = 0;
-            Dictionary<int, int> dic = new Dictionary<int, int>();
-            foreach(int i in nums)
+            int res = 1;
+            int count = 1;
+            for(int i = 1;i<nums.Length;i++)
             {
-                if (!dic.ContainsKey(i)) dic.Add(i, 1);
-                else if (dic[i] < 2) dic[i]++;
-            }
-            int count = 0;
-            foreach(int i in dic.Keys)
-            {
-                res += dic[i];
-                for(int j = 0;j<dic[i];j++)
+                if(nums[i]==nums[i-1])
                 {
-                    nums[count] = i;
-                    count++;
+                    if (count == 2) continue;        
+                    else
+                    {
+                        count++;
+                        nums[res] = nums[i];
+                        res++;
+                    }
+                }   
+                else
+                {
+                    count = 1;
+                    nums[res] = nums[i];
+                    res++;
                 }
             }
             return res;
