@@ -21,7 +21,30 @@ namespace Leetcode
                     length++;
                 }
             }
-            return length;   
+            return length;
+        }
+        public int RemoveDuplicatesII(int[] nums)
+        {
+            if (nums.Length <= 1) return nums.Length;
+            int res = 0;
+            Dictionary<int, int> dic = new Dictionary<int, int>();
+            foreach(int i in nums)
+            {
+                if (!dic.ContainsKey(i)) dic.Add(i, 1);
+                else if (dic[i] < 2) dic[i]++;
+            }
+            int count = 0;
+            foreach(int i in dic.Keys)
+            {
+                res += dic[i];
+                for(int j = 0;j<dic[i];j++)
+                {
+                    nums[count] = i;
+                    count++;
+                }
+            }
+            return res;
+
         }
     }
 }
