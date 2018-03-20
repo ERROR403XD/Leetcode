@@ -90,6 +90,7 @@
     <Compile Include="061-080\Minimum Path Sum.cs" />
     <Compile Include="061-080\Minimum Window Substring.cs" />
     <Compile Include="061-080\Plus One.cs" />
+    <Compile Include="Largest Rectangle in Histogram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="02PublicSource.cs" />
     <Compile Include="001-020\RegularExpressionMatching.cs" />
@@ -123,7 +124,7 @@
     <Compile Include="061-080\Valid Number.cs" />
     <Compile Include="061-080\Word Search.cs" />
     <Compile Include="Remove Duplicates from Sorted List.cs" />
-    <Compile Include="Search in Rotated Sorted Array II.cs" />
+    <Compile Include="Search in Rotated Sorted ArrayII.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

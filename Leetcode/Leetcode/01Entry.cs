@@ -26,7 +26,7 @@ namespace Leetcode
                                                     {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
                                                     {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
                                                     {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
-            int[] testArray = new int[] {-9, -9, -9, -8, -8, -7, -7, -7, -7, -6, -6, -6, -6, -6, -6, -6, -6, -6, -5, -5, -5, -5, -5, -4, -4, -4, -3, -3, -3, -3, -3, -3, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -1, -1, -1, -1, -1, -1, 0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7, 8, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, -10, -9, -9, -9, -9};
+            int[] testArray = new int[] {3, 6, 5, 7, 4, 8, 1, 0};
             int[] testEqual = new int[] { 1, 2, 2 };
             int[] testArrayM = new int[] { 3 };
             int[] testArrayN = new int[] { 1, 2 };
@@ -56,10 +56,8 @@ namespace Leetcode
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
-
-            Remove_Duplicates_from_Sorted_List test = new Remove_Duplicates_from_Sorted_List();
-            test.DeleteDuplicates(head);
-
+            Largest_Rectangle_in_Histogram test = new Largest_Rectangle_in_Histogram();
+            test.LargestRectangleArea(testArray);
 
             
             
