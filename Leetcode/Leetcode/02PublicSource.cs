@@ -11,6 +11,16 @@ namespace Leetcode
         public int val;
         public ListNode next;
         public ListNode(int x) { val = x; }
+        public ListNode(params int[] arr)
+        {
+            this.val = arr[0];
+            ListNode cur = this;
+            for(int i = 1;i<arr.Length;i++)
+            {
+                cur.next = new ListNode(arr[i]);
+                cur = cur.next;
+            }
+        }
     }
     public class Interval
     {

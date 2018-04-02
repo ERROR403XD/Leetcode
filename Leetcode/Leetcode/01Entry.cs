@@ -38,26 +38,29 @@ namespace Leetcode
             list.Add(2);
             list.Remove(3);
             int testInt = -2147447412;
+            /*
             ListNode head = new ListNode(1);
-            ListNode end1 = new ListNode(1);
-            ListNode end2 = new ListNode(2);
+            ListNode end1 = new ListNode(4);
+            ListNode end2 = new ListNode(3);
             ListNode end3 = new ListNode(2);
-            ListNode end4 = new ListNode(4);
-            ListNode end5 = new ListNode(4);
+            ListNode end4 = new ListNode(5);
+            ListNode end5 = new ListNode(3);
             ListNode end6 = new ListNode(4);
             head.next = end1;
             end1.next = end2;
-            //end2.next = end3;
+            end2.next = end3;
             end3.next = end4;
             end4.next = end5;
             end5.next = end6;
+            */
+            ListNode head2 = new ListNode(1,1);
 
             //Interval[] testIntervals = new Interval[] {new Interval(1,3), new Interval(5, 7), new Interval(12,16), new Interval(17,21), new Interval(26, 30) };
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
-            Largest_Rectangle_in_Histogram test = new Largest_Rectangle_in_Histogram();
-            test.LargestRectangleArea(testArray);
+            Partition_List test = new Partition_List();
+            test.Partition(head2, 0);
 
             
             
