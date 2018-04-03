@@ -90,8 +90,11 @@
     <Compile Include="061-080\Minimum Path Sum.cs" />
     <Compile Include="061-080\Minimum Window Substring.cs" />
     <Compile Include="061-080\Plus One.cs" />
+    <Compile Include="Decode Ways.cs" />
+    <Compile Include="Gray Code.cs" />
     <Compile Include="Largest Rectangle in Histogram.cs" />
     <Compile Include="Maximal Rectangle.cs" />
+    <Compile Include="Merge Sorted Array.cs" />
     <Compile Include="Partition List.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="02PublicSource.cs" />
