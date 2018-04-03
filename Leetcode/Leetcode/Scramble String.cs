@@ -16,7 +16,7 @@ namespace Leetcode
             Dictionary<char, int> check = new Dictionary<char, int>();
             for(int i = 0;i<length;i++)
             {
-                if(check.ContainsKey)
+                if(check.ContainsKey(s1[i]))
             }
         }
     }
