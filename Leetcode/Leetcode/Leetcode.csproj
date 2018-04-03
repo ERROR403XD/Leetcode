@@ -126,6 +126,7 @@
     <Compile Include="061-080\Valid Number.cs" />
     <Compile Include="061-080\Word Search.cs" />
     <Compile Include="Remove Duplicates from Sorted List.cs" />
+    <Compile Include="Scramble String.cs" />
     <Compile Include="Search in Rotated Sorted ArrayII.cs" />
   </ItemGroup>
   <ItemGroup>

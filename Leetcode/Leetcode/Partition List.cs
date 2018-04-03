@@ -12,41 +12,44 @@ namespace Leetcode
         {
 
             if (head == null) return null;
-            if (head.next == null) return head;
-            ListNode cur = head, more = null,more_s=null,res = head;
-            while(cur.next!=null)
+            ListNode cur = head, left = null, right = null, left_s = null, right_s = null;
+            while(cur!=null)
             {
-                if(cur.next.val>=x)
+                if(cur.val<x)
                 {
-                    if(more==null)
+                    if(left==null)
                     {
-                        more = cur.next;
-                        more_s = more;
+                        left = cur;
+                        left_s = cur;
                     }
                     else
                     {
-                        more.next = cur.next;
-                        more = more.next;
+                        left.next = cur;
+                        left = left.next;
                     }
-                    cur.next = cur.next.next;
                 }
-                if (cur.next == null) break;
-                else cur = cur.next;
+                else
+                {
+                    if(right==null)
+                    {
+                        right = cur;
+                        right_s = cur;
+                    }
+                    else
+                    {
+                        right.next = cur;
+                        right = right.next;
+                    }
+                }
+                cur = cur.next;
             }
-            if(head.val>=x)
-            {
-                res = head.next;
-                cur.next = head;
-                head.next = more_s;
-            }
+            if (right != null) right.next = null;
+            if (left_s == null) return right_s;
             else
             {
-                cur.next = more_s;
+                left.next = right_s;
+                return left_s;
             }
-
-            return res;
-
-
         }
     }
 }
