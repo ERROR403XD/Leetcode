@@ -60,7 +60,7 @@ namespace Leetcode
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
             Decode_Ways test = new Decode_Ways();
-            test.NumDecodings("1223");
+            test.NumDecodings("227");
 
             
             
