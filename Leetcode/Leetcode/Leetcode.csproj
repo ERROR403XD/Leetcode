@@ -90,6 +90,7 @@
     <Compile Include="061-080\Minimum Path Sum.cs" />
     <Compile Include="061-080\Minimum Window Substring.cs" />
     <Compile Include="061-080\Plus One.cs" />
+    <Compile Include="Binary Tree Inorder Traversal.cs" />
     <Compile Include="Decode Ways.cs" />
     <Compile Include="Gray Code.cs" />
     <Compile Include="Largest Rectangle in Histogram.cs" />
@@ -129,8 +130,11 @@
     <Compile Include="061-080\Valid Number.cs" />
     <Compile Include="061-080\Word Search.cs" />
     <Compile Include="Remove Duplicates from Sorted List.cs" />
+    <Compile Include="Restore IP Addresses.cs" />
+    <Compile Include="Reverse Linked List.cs" />
     <Compile Include="Scramble String.cs" />
     <Compile Include="Search in Rotated Sorted ArrayII.cs" />
+    <Compile Include="Unique Binary Search Trees.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

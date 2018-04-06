@@ -53,14 +53,14 @@ namespace Leetcode
             end4.next = end5;
             end5.next = end6;
             */
-            ListNode head2 = new ListNode(1,1);
+            ListNode head2 = new ListNode(3,5);
 
             //Interval[] testIntervals = new Interval[] {new Interval(1,3), new Interval(5, 7), new Interval(12,16), new Interval(17,21), new Interval(26, 30) };
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
-            Decode_Ways test = new Decode_Ways();
-            test.NumDecodings("227");
+            Restore_IP_Addresses test = new Restore_IP_Addresses();
+            test.RestoreIpAddresses("12312");
 
             
             

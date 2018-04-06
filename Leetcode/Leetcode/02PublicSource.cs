@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace Leetcode
 {
+    public class TreeNode
+    {
+      public int val;
+      public TreeNode left;
+      public TreeNode right;
+      public TreeNode(int x) { val = x; }
+ }
     class ListNode
     {
         public int val;
