@@ -59,8 +59,8 @@ namespace Leetcode
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
-            Restore_IP_Addresses test = new Restore_IP_Addresses();
-            test.RestoreIpAddresses("12312");
+            Interleaving_String test = new Interleaving_String();
+            test.IsInterleave("a", "", "a");
 
             
             
