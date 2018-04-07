@@ -28,8 +28,8 @@ namespace Leetcode
                                                     {'.', '.', '.', '2', '7', '5', '9', '.', '.'}};
             int[] testArray = new int[] {1,2,2};
             int[] testEqual = new int[] { 1, 2, 2 };
-            int[] testArrayM = new int[] { 1};
-            int[] testArrayN = new int[] {  };
+            int[] testArrayM = new int[] {3,9,20,15,7};
+            int[] testArrayN = new int[] { 9, 3, 15, 20, 7 };
             int[,] testMat = new int[,] { {1,2,3 },{4,5,6 },{7,8,9 },{10,11,12 } };
             string[] testStringArray = new string[] { "abc", "def", "qwe" };
             int[,] path = new int[1, 1] { { 1} };
@@ -59,8 +59,8 @@ namespace Leetcode
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
-            Interleaving_String test = new Interleaving_String();
-            test.IsInterleave("a", "", "a");
+            Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal test = new Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal();
+            test.BuildTree(testArrayM, testArrayN);
 
             
             

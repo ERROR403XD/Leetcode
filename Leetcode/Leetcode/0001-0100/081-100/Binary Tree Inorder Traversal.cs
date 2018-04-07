@@ -22,5 +22,6 @@ namespace Leetcode
             res.Add(root.val);
             if (root.right != null) InorderTraversal(root.right, res);
         }
+
     }
 }

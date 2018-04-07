@@ -98,6 +98,12 @@
     <Compile Include="0001-0100\081-100\Maximal Rectangle.cs" />
     <Compile Include="0001-0100\081-100\Merge Sorted Array.cs" />
     <Compile Include="0001-0100\081-100\Partition List.cs" />
+    <Compile Include="Binary Tree Level Order Traversal.cs" />
+    <Compile Include="Binary Tree Zigzag Level Order Traversal.cs" />
+    <Compile Include="Construct Binary Tree from Inorder and Postorder Traversal.cs" />
+    <Compile Include="Construct Binary Tree from Preorder and Inorder Traversal.cs" />
+    <Compile Include="Convert Sorted Array to Binary Search Tree.cs" />
+    <Compile Include="Maximum Depth of Binary Tree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="02PublicSource.cs" />
     <Compile Include="0001-0100\001-020\RegularExpressionMatching.cs" />
@@ -139,6 +145,7 @@
     <Compile Include="0001-0100\081-100\Search in Rotated Sorted ArrayII.cs" />
     <Compile Include="0001-0100\081-100\Unique Binary Search Trees.cs" />
     <Compile Include="0001-0100\081-100\Validate Binary Search Tree.cs" />
+    <Compile Include="Symmetric Tree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
