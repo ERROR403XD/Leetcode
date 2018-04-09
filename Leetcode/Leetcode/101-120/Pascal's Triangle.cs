@@ -26,5 +26,19 @@ namespace Leetcode
             }
             return res;
         }
+        public IList<int> GetRow(int rowIndex)
+        {
+            List<int> res = new List<int>();
+            if (rowIndex == 0) return res;
+            res.Add(1);
+            if (rowIndex == 1) return res;
+            IList<int> last = GetRow(rowIndex - 1);
+            for(int i = 0;i<rowIndex-2;i++)
+            {
+                res.Add(last[i] + last[i + 1]);
+            }
+            res.Add(1);
+            return res;
+        }
     }
 }
