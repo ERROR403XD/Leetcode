@@ -12,7 +12,13 @@ namespace Leetcode
       public TreeNode left;
       public TreeNode right;
       public TreeNode(int x) { val = x; }
- }
+     }
+    public class TreeLinkNode
+    {
+        public int val;
+        public TreeLinkNode left, right, next;
+        public TreeLinkNode(int x) { val = x; }
+    }
     class ListNode
     {
         public int val;

@@ -59,9 +59,8 @@ namespace Leetcode
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
-            Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal test = new Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal();
-            test.BuildTree(testArrayM, testArrayN);
-
+            Distinct_Subsequences test = new Distinct_Subsequences();
+            test.NumDistinct("rabbbit", "rabbit");
             
             
             
