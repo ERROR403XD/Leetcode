@@ -38,29 +38,24 @@ namespace Leetcode
             list.Add(2);
             list.Remove(3);
             int testInt = -2147447412;
-            /*
-            ListNode head = new ListNode(1);
-            ListNode end1 = new ListNode(4);
-            ListNode end2 = new ListNode(3);
-            ListNode end3 = new ListNode(2);
-            ListNode end4 = new ListNode(5);
-            ListNode end5 = new ListNode(3);
-            ListNode end6 = new ListNode(4);
-            head.next = end1;
-            end1.next = end2;
-            end2.next = end3;
-            end3.next = end4;
-            end4.next = end5;
-            end5.next = end6;
-            */
+            TreeNode t1 = new TreeNode(1);
+            t1.left = new TreeNode(2);
+            t1.right = new TreeNode(3);
+            t1.left.left = new TreeNode(4);
+            t1.left.right = new TreeNode(5);
+            t1.right.left = new TreeNode(6);
+            t1.right.right = new TreeNode(7);
+            TreeNode t2 = new TreeNode(1);
+            t2.left = new TreeNode(2);
+            t2.right = new TreeNode(3);
             ListNode head2 = new ListNode(3,5);
 
             //Interval[] testIntervals = new Interval[] {new Interval(1,3), new Interval(5, 7), new Interval(12,16), new Interval(17,21), new Interval(26, 30) };
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
-            Distinct_Subsequences test = new Distinct_Subsequences();
-            test.NumDistinct("rabbbit", "rabbit");
+            Sum_Root_to_Leaf_Numbers test = new Sum_Root_to_Leaf_Numbers();
+            test.SumNumbers(t2);
             
             
             

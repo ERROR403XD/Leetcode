@@ -112,6 +112,9 @@
     <Compile Include="101-120\Pascal%27s Triangle.cs" />
     <Compile Include="101-120\Path Sum.cs" />
     <Compile Include="101-120\Populating Next Right Pointers in Each Node.cs" />
+    <Compile Include="Best Time to Buy and Sell Stock.cs" />
+    <Compile Include="Binary Tree Maximum Path Sum.cs" />
+    <Compile Include="Longest Consecutive Sequence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="02PublicSource.cs" />
     <Compile Include="0001-0100\001-020\RegularExpressionMatching.cs" />
@@ -155,6 +158,9 @@
     <Compile Include="0001-0100\081-100\Validate Binary Search Tree.cs" />
     <Compile Include="101-120\Symmetric Tree.cs" />
     <Compile Include="101-120\Triangle.cs" />
+    <Compile Include="Sum Root to Leaf Numbers.cs" />
+    <Compile Include="Valid Palindrome.cs" />
+    <Compile Include="Word Ladder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
