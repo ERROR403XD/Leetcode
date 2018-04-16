@@ -54,8 +54,8 @@ namespace Leetcode
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
-            Sum_Root_to_Leaf_Numbers test = new Sum_Root_to_Leaf_Numbers();
-            test.SumNumbers(t2);
+            Palindrome_Partitioning test = new Palindrome_Partitioning();
+            test.Partition("aab");
             
             
             
