@@ -55,9 +55,7 @@ namespace Leetcode
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
             Palindrome_Partitioning test = new Palindrome_Partitioning();
-            test.Partition("aab");
-            
-            
+            test.MinCutNew("aabb");
             
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             //Console.WriteLine(testString2.Substring(12));

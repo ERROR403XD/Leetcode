@@ -43,6 +43,13 @@ namespace Leetcode
         public Interval(int s, int e) { start = s; end = e; }
     }
 
+    public class UndirectedGraphNode
+    {
+        public int label;
+        public IList<UndirectedGraphNode> neighbors;
+        public UndirectedGraphNode(int x) { label = x; neighbors = new List<UndirectedGraphNode>(); }
+    }
+
     class CopySource
     {
         private void Sort(int[] nums)
