@@ -54,8 +54,8 @@ namespace Leetcode
             List<Interval> testIntervals = new List<Interval>() { new Interval(1, 2), new Interval(3, 5), new Interval(6, 7), new Interval(8, 10), new Interval(12, 16) };
             string[] testStrs = new string[] { "What", "must", "be", "shall", "be."};
 
-            Palindrome_Partitioning test = new Palindrome_Partitioning();
-            test.MinCutNew("aabb");
+            Word_Break test = new Word_Break();
+            test.WordBreak_("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaabaaaaaaaaaaaaa", new List<string>() { "aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa","ba" });
             
             //Console.WriteLine(test.RemoveNthFromEnd(head,1));
             //Console.WriteLine(testString2.Substring(12));
@@ -63,7 +63,7 @@ namespace Leetcode
             double t = 4.5, r = 0.002, a = 1.0/10000;
             double c = 0.735;
             Console.WriteLine(c-t/(((r+t/c)/(1+a))-r));
-            Console.WriteLine(c / 10000);
+            Console.WriteLine(new string(new char[5]));
 
             Console.ReadKey();
         }

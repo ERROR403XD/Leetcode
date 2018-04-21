@@ -49,6 +49,12 @@ namespace Leetcode
         public IList<UndirectedGraphNode> neighbors;
         public UndirectedGraphNode(int x) { label = x; neighbors = new List<UndirectedGraphNode>(); }
     }
+    public class RandomListNode
+    {
+        public int label;
+        public RandomListNode next, random;
+        public RandomListNode(int x) { this.label = x; }
+    }
 
     class CopySource
     {
